@@ -36,6 +36,8 @@ public class Application {
         }
     }
 
+    /* Methods for getting Application data */
+
     public void setDate(Date date)
     {
         this.Date = date;
@@ -74,6 +76,15 @@ public class Application {
     public void setCalls(Array calls)
     {
         this.Calls = calls;
+    }
+
+    /* Methods for setting Application data */
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    public Long getId() {
+        return id;
     }
 
     public Date getDate() {
