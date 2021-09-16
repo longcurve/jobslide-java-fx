@@ -1,5 +1,7 @@
 package com.splyndidxyz.jobopeningtracker.data;
 
+import java.util.*;
+
 public class ApplicationManager {
 
     public ApplicationManager(){
@@ -37,7 +39,7 @@ public class ApplicationManager {
     }
 
     /* Method to UPDATE salary for an Application */
-    public void updateApplication(Integer ApplicationID, Array newData ){
+    public void updateApplication(Integer ApplicationID, String[] newData ){
         Session session = factory.openSession();
         Transaction tx = null;
 

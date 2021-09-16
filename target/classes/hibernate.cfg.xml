@@ -4,8 +4,6 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.username">app</property>
-        <property name="hibernate.connection.password">app</property>
         <property name="hibernate.connection.url">jdbc:derby://localhost:1527/job-opening-tracker</property>
 
         <!-- Enable Hibernate's automatic session context management -->
