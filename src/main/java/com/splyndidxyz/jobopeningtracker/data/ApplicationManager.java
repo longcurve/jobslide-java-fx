@@ -1,14 +1,20 @@
 package com.splyndidxyz.jobopeningtracker.data;
 
 import java.util.*;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 public class ApplicationManager {
 
     public ApplicationManager(){
         // A SessionFactory is set up once for an application!
-        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.xml
-                .build();
+        final StandardServiceRegistryBuilder registry = new StandardServiceRegistryBuilder();
+        reg_builder.applySettings(cfg.getProperties());
+        reg = reg_builder.build();
+
         try {
             sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
         }

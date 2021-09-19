@@ -80,9 +80,6 @@ public class Application {
 
     /* Methods for setting Application data */
 
-    @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
     public Long getId() {
         return id;
     }

@@ -121,13 +121,18 @@
 
         <dependency>
             <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.5.7.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>3.6.0.Final</version>
+            <version>4.3.11.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
-            <version>1.0.0.Final</version>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.2.Final</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -232,13 +237,6 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
-
-        <dependency>
-            <groupId>log4jdbc3</groupId>
-            <artifactId>log4jdbc3</artifactId>
-            <version>1.2beta2</version>
-            <scope>compile</scope>
-        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -246,14 +244,6 @@
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>ojdbc</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>14</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
     <build>
         <plugins>
