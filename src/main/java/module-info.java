@@ -4,10 +4,10 @@ module com.splyndidxyz.job.opening.tracker {
     requires java.logging;
     requires java.sql;
     requires java.sql.rowset;
-    requires hibernate.core;
-    requires hibernate.validator;
+    requires org.hibernate.orm.core;
+    requires org.hibernate.validator;
+    opens com.splyndidxyz.jobopeningtracker.data to org.hibernate.orm.core;
 
-    opens com.splyndidxyz.jobopeningtracker to javafx.fxml;
     exports com.splyndidxyz.jobopeningtracker;
     requires javafx.graphicsEmpty;
 }
