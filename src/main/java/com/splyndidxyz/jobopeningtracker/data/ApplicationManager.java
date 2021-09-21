@@ -12,7 +12,7 @@ public class ApplicationManager {
 
     public ApplicationManager(){
         // A SessionFactory is set up once for an application!
-        final StandardServiceRegistryBuilder registry = new StandardServiceRegistryBuilder();
+        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder();
         reg_builder.applySettings(cfg.getProperties());
         reg = reg_builder.build();
 
