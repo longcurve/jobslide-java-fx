@@ -1,0 +1,137 @@
+Fri Aug 27 05:04:58 PDT 2021 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Database 'derbyDB' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+Caused by: ERROR XJ004: Database 'derbyDB' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 25 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'derbyDB' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Fri Aug 27 05:05:19 PDT 2021 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Database 'jobopeningtracker' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+Caused by: ERROR XJ004: Database 'jobopeningtracker' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 25 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'jobopeningtracker' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+----------------------------------------------------------------
+Fri Aug 27 05:12:24 PDT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (???): instance a816c00e-017b-877f-b237-0000061b3978 
+on database directory /home/jubale/NetBeansProjects/job-opening-tracker/job-opening-tracker with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@277050dc 
+Loaded from file:/usr/share/java/derby.jar
+java.vendor=AdoptOpenJDK
+java.runtime.version=11.0.11+9
+user.dir=/home/jubale/NetBeansProjects/job-opening-tracker
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-81-lowlatency
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
