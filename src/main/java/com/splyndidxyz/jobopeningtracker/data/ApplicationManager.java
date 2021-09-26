@@ -11,19 +11,24 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 
 public class ApplicationManager {
 
-    public ApplicationManager(){
-        try {
-            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+    // A SessionFactory is set up once for an application!
+    final StandardServiceRegistryBuilder reg_builder;
+    StandardServiceRegistry reg;
+    SessionFactory factory;
 
-            // A SessionFactory is set up once for an application!
-            final StandardServiceRegistryBuilder reg_builder = new StandardServiceRegistryBuilder();
-            reg_builder.applySettings(sessionFactory.getProperties());
-            StandardServiceRegistry reg = reg_builder.build();
+    public ApplicationManager(){
+
+        try {
+            factory = new Configuration().configure().buildSessionFactory();
+
+            reg_builder = new StandardServiceRegistryBuilder();
+            reg_builder.applySettings(factory.getProperties());
+            reg = reg_builder.build();
         }
         catch (Exception e) {
             // The registry would be destroyed by the SessionFactory, but we had trouble building the SessionFactory
             // so destroy it manually.
-            StandardServiceRegistryBuilder.destroy(reg_builder);
+            StandardServiceRegistryBuilder.destroy(reg);
         }
     }
     /* Method to CREATE an Application in the database */
@@ -34,7 +39,7 @@ public class ApplicationManager {
 
         try {
             tx = session.beginTransaction();
-            Application Application = new Application(fname, lname, salary);
+            Application Application = new Application();
             ApplicationID = (Integer) session.save(Application);
             tx.commit();
         } catch (HibernateException e) {
@@ -54,7 +59,7 @@ public class ApplicationManager {
         try {
             tx = session.beginTransaction();
             Application Application = (Application)session.get(Application.class, ApplicationID);
-            Application.setSalary(newData);
+            Application.setPosition(newData[1]);
             session.update(Application);
             tx.commit();
         } catch (HibernateException e) {
