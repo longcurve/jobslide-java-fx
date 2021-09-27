@@ -12,24 +12,17 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 public class ApplicationManager {
 
     // A SessionFactory is set up once for an application!
+    SessionFactory factory;
     final StandardServiceRegistryBuilder reg_builder;
     StandardServiceRegistry reg;
-    SessionFactory factory;
+
 
     public ApplicationManager(){
-
-        try {
             factory = new Configuration().configure().buildSessionFactory();
-
             reg_builder = new StandardServiceRegistryBuilder();
             reg_builder.applySettings(factory.getProperties());
             reg = reg_builder.build();
-        }
-        catch (Exception e) {
-            // The registry would be destroyed by the SessionFactory, but we had trouble building the SessionFactory
-            // so destroy it manually.
-            StandardServiceRegistryBuilder.destroy(reg);
-        }
+
     }
     /* Method to CREATE an Application in the database */
     public Integer addApplication(String fname, String lname, int salary){
@@ -58,7 +51,7 @@ public class ApplicationManager {
 
         try {
             tx = session.beginTransaction();
-            Application Application = (Application)session.get(Application.class, ApplicationID);
+            Application Application = session.get(Application.class, ApplicationID);
             Application.setPosition(newData[1]);
             session.update(Application);
             tx.commit();

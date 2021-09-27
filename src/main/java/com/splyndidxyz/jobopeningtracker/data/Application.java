@@ -8,6 +8,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,6 +18,7 @@ import org.hibernate.cfg.Configuration;
 public class Application {
     private static SessionFactory factory;
 
+    private Long id;
     private Date Date;
     private String Position;
     private String Company;

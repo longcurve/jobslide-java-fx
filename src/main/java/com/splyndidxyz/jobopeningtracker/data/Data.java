@@ -51,10 +51,6 @@ public class Data {
         return calls;
     }
 
-    public static Connection getDBConnection() throws SQLException {
-
-    }
-
     public void getEntries() {
 
         PreparedStatement psEntries;
